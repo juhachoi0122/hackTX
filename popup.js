@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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'
+        'Authorization': 'enter your own API key' //need to be adjusted by user
       },
       body: JSON.stringify({
         'model': 'gpt-3.5-turbo', // Specify the model you want to use
