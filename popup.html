@@ -2,10 +2,15 @@
 <html>
 <head>
   <title>Keyword Extractor</title>
+  <link rel="stylesheet" type="text/css" href="popup-style.css"> 
   <script src="popup.js"></script>
 </head>
 <body>
-  <h2>Keywords on this page:</h2>
-  <ul id="keywordList"></ul>
+  <h1>10-Word Summary Extension</h1>
+  <p>Enter text to summarize (max 10 words):</p>
+  <input type="text" id="userInput" />
+  <button id="generateSummary">Generate Summary</button>
+  <p>Summary:</p>
+  <div id="summary"></div>
 </body>
 </html>

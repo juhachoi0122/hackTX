@@ -1,31 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.scripting.executeScript({
-      target: { tabId: tabs[0].id },
-      function: getKeywords,
-    });
-  });
-});
-
-function getKeywords() {
-  chrome.runtime.sendMessage({ action: "getKeywords" });
-}
-
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === "displayKeywords") {
-    const keywordList = document.getElementById("keywordList");
-    keywordList.innerHTML = ""; // Clear previous keywords
-
-    if (message.keywords.length === 0) {
-      const noKeywordsText = document.createElement("p");
-      noKeywordsText.textContent = "No keywords found on this page.";
-      keywordList.appendChild(noKeywordsText);
-    } else {
-      message.keywords.forEach((keyword) => {
-        const li = document.createElement("li");
-        li.textContent = keyword;
-        keywordList.appendChild(li);
+document.addEventListener('DOMContentLoaded', function() {
+    const generateButton = document.getElementById('generate');
+    const inputTextarea = document.getElementById('input');
+    const summaryDiv = document.getElementById('summary');
+  
+    generateButton.addEventListener('click', async function() {
+      const inputText = inputTextarea.value;
+      if (inputText.trim() === '') {
+        summaryDiv.textContent = 'Enter text:';
+        return;
+      }
+  
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': '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'
+        },
+        body: JSON.stringify({
+          'messages': [{'role': 'system', 'content': 'You: ' + inputText}, {'role': 'system', 'content': 'You: Generate a 10-word summary.'}],
+          'max_tokens': 10
+        })
       });
-    }
-  }
-});
+  
+      const data = await response.json();
+      const summary = data.choices[0].message.content;
+      summaryDiv.textContent = summary;
+    });
+  });  
