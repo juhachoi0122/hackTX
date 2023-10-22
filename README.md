@@ -9,7 +9,7 @@ To help a friend who refuses to read more than 10 words
 Reads text from user input and generates 10 keywords from it
 
 ## Try it out
-1. Download zip file
+1. Download zip file (user may have to enter their own API key into popup.js file)
 2. Go to chrome://extensions/
 3. Select [Load unpacked] on top left corner
 4. Use extension!
