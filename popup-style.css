@@ -24,7 +24,7 @@ h1 {
 }
 
 #generateSummary {
-    background-color: #00b831;
+    background-color: #005bb8;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -35,7 +35,7 @@ h1 {
 }
 
 #generateSummary:hover {
-    background-color: #005bb8; 
+    background-color: #00b831; 
 }
 
 
