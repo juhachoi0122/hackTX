@@ -1,4 +1,6 @@
-# hackTX
-google extension for summarizing text in key words
+# hackTX project - keyword extractor
 
-made with javascript, html,
+Google Chrome extension for summarizing input text in around 10 keywords
+
+made with javascript, html, openAI API, formatted with css, python(future development)
+
