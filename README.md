@@ -6,7 +6,7 @@ made with javascript, html, openAI API, formatted with css, python(future develo
 To help a friend who refuses to read more than 10 words
 
 ## What it does
-Reads text from user input and generates 10 keywords from it
+Reads text from user input and generates around 10 keywords from it
 
 ## Try it out
 1. Download zip file (user may have to enter their own API key into popup.js file)
