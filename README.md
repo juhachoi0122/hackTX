@@ -6,7 +6,7 @@ made with javascript, html, openAI API, formatted with css, python(future develo
 To help a friend who refuses to read more than 10 words
 
 ## What it does
-Reads text from user input and generates around 10 keywords from it
+Reads text from user input and generates a 10 keyword summary from it
 
 ## Try it out
 1. Download zip file (user may have to enter their own API key into popup.js file)
@@ -26,6 +26,6 @@ Reads text from user input and generates around 10 keywords from it
 - How to build Chrome extensions using HTML, javascript, CSS
 - Usefulness of chatGPT in programming
 
-## What's next for Keyword Generator
+## What's next for Keyword Extractor
 - Using web scraping with python to automatically generate keywords from a highlighted portion of the website without the user having to manually enter text
 - Security errors
