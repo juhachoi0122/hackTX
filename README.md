@@ -22,3 +22,4 @@ Reads text from user input and generates 10 keywords from it
 
 ## What's next for Keyword Generator
 - Using web scraping with python to automatically generate keywords from a highlighted portion of the website without the user having to manually enter text
+- Security errors
